@@ -1,0 +1,226 @@
+* {
+    cursor: none;
+}
+
+/* ------------------------------------- NavBar ------------------------------------ */
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-item:hover .nav-logo {
+    transform: translateX(-50px);
+}
+
+.nav-item:hover .nav-details {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nav-logo {
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-details {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    left: 10px;
+}
+
+/* --------------------------------- left side icons ---------------------------------- */
+.icon {
+    transition: transform 0.3s, font-size 0.3s;
+}
+
+.icon:hover {
+    transform: translateX(10px) scale(1.2);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    left: 150%;
+    /* Position the tooltip to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    background-color: white;
+    /* transition: transform 0s ease-in-out, width 0.1s ease-in-out, height 0.1s ease-in-out; */
+    z-index: 9999;
+}
+
+/* -----------------------------Right Side Nav items------------------------------- */
+
+.nav-rightSide {
+    transition: transform 0.3s, font-size 0.3s;
+}
+
+.nav-rightSide:hover {
+    transform: translateX(-10px) scale(1.2);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.fade-in-left,
+.fade-in-right {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in-left {
+    transform: translateX(-50px);
+}
+
+.fade-in-right {
+    transform: translateX(50px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden-left {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.hidden-right {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* -------------------------------------- Journey section ---------------------------- */
+
+.timeline-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item .icon {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* --------------------------- Skills section ----------------------------------- */
+
+.skill-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.skill-item:hover .skill-logo {
+    transform: translateX(-50px);
+}
+
+.skill-item:hover .skill-details {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.skill-logo {
+    transition: all 0.5s ease-in-out;
+}
+
+.skill-details {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    left: 110px;
+}
+
+.skill-item:hover .progress-bar {
+    width: 1=200%;
+}
+
+.progress-bar {
+    width: 500px;
+    transition: all 0.5s ease-in-out;
+}
