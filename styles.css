@@ -1,5 +1,6 @@
 * {
     cursor: none;
+    scroll-behavior: smooth;
 }
 
 /* ------------------------------------- NavBar ------------------------------------ */
@@ -81,7 +82,7 @@
     pointer-events: none;
     mix-blend-mode: difference;
     background-color: white;
-    /* transition: transform 0s ease-in-out, width 0.1s ease-in-out, height 0.1s ease-in-out; */
+    /* transition: width 0.2s, height 0.2s, transform 0s; */
     z-index: 9999;
 }
 
