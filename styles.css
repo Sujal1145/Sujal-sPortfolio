@@ -1,14 +1,38 @@
 * {
     cursor: none;
     scroll-behavior: smooth;
+    /* max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box; */
 }
 
-html,body{
+html, body {
     width: 100%;
     overflow-x: hidden;
 }
+
+
 /* ------------------------------------- NavBar ------------------------------------ */
 
+/* Scroll Logo */
+.navbar {
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+}
+.navbar-visible {
+    opacity: 1;
+}
+.logo-slide {
+    transform: translateX(1500%);
+    transition: transform 0.9s, opacity 0.9s;
+    opacity: 0;
+}
+.logo-visible {
+    transform: translateX(45px);
+    opacity: 1;
+}
+
+/* normal navbar */
 .nav-item {
     display: flex;
     justify-content: center;
@@ -229,4 +253,3 @@ html,body{
     width: 500px;
     transition: all 0.5s ease-in-out;
 }
-

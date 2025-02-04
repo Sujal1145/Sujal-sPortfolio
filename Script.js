@@ -121,6 +121,20 @@ document.querySelectorAll('.Right-NAV').forEach(item => {
     });
 });
 
+// --------------------------------- scroll logo animation----------------------
+
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    const logo = document.getElementById('logo');
+    if (window.scrollY > window.innerHeight * 0.1) {
+        navbar.classList.add('navbar-visible');
+        logo.classList.add('logo-visible');
+    } else {
+        navbar.classList.remove('navbar-visible');
+        logo.classList.remove('logo-visible');
+    }
+});
+
 // ---------------------------------- Journey section -----------------------
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -188,7 +202,6 @@ document.querySelectorAll('.nav-rightSide').forEach(anchor => {
         }
     });
 });
-
 
 // ------------------------------------menuBar code---------------------
 document.addEventListener("DOMContentLoaded", function () {
@@ -265,5 +278,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         lastScrollY = scrollY;
+    });
+});
+
+// ------------------------------------skill section-------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const skillItems = document.querySelectorAll('.skill-item');
+
+    const observerOptions = {
+        root: null, // Use the viewport as the root
+        threshold: 0.1 // Trigger when 10% of the item is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-up'); // Add the fade-up class
+            } else {
+                entry.target.classList.remove('fade-up'); // Remove the fade-up class when out of view
+            }
+        });
+    }, observerOptions);
+
+    skillItems.forEach(item => {
+        observer.observe(item); // Observe each skill item
     });
 });

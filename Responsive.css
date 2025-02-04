@@ -1,6 +1,382 @@
+/* ------------------------contact section---------- */
+@media (max-width: 768px) {
+    #contact .grid {
+        padding: 50px !important; /* Reduce padding for smaller screens */
+    }
+
+    #contact .grid-cols-1 {
+        grid-template-columns: 1fr !important; /* Force single column layout */
+    }
+
+    #contact .flex.items-center.justify-center {
+        display: none; /* Hide the image on smaller screens */
+    }
+
+    #contact h1.text-4xl {
+        font-size: 2rem !important; /* Reduce heading size */
+    }
+
+    #contact p.text-lg {
+        font-size: 1rem !important; /* Reduce paragraph text size */
+    }
+
+    #contact input,
+    #contact textarea {
+        font-size: 14px !important; /* Reduce font size for inputs */
+    }
+
+    #contact button {
+        font-size: 14px !important; /* Reduce button font size */
+    }
+
+    #contact .container.mx-auto.px-4.text-center.py-4 {
+        padding: 20px !important; /* Adjust footer padding */
+    }
+
+    #contact .container.mx-auto.px-4.text-center.py-4 p {
+        font-size: 0.875rem !important; /* Reduce footer text size */
+    }
+
+    .custom-cursor{
+        display: none;
+    }
+    * {
+        cursor:auto;
+        scroll-behavior: smooth;
+        /* max-width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box; */
+    }
+}
+
+@media (max-width: 480px) {
+    #contact .grid {
+        padding: 20px !important; /* Further reduce padding for very small screens */
+    }
+
+    #contact h1.text-4xl {
+        font-size: 1.5rem !important; /* Further reduce heading size */
+    }
+
+    #contact p.text-lg {
+        font-size: 0.875rem !important; /* Further reduce paragraph text size */
+    }
+
+    #contact input,
+    #contact textarea {
+        font-size: 12px !important; /* Further reduce font size for inputs */
+    }
+
+    #contact button {
+        font-size: 12px !important; /* Further reduce button font size */
+    }
+
+    #contact .container.mx-auto.px-4.text-center.py-4 p {
+        font-size: 0.75rem !important; /* Further reduce footer text size */
+    }
+}
+
+/* ------------about section ------- */
+
+/* Responsive styles for small devices like smartphones */
+@media (max-width: 767px) {
+    #about {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    #about .w-full {
+        width: 100% !important;
+    }
+
+    #about .md\:w-1\/2 {
+        width: 100% !important;
+    }
+
+    #about .p-6 {
+        padding: 1.5rem !important;
+    }
+
+    #about .p-1 {
+        padding: 0.5rem !important;
+    }
+
+    #about .text-4xl {
+        font-size: 1.875rem !important;
+    }
+
+    #about .text-lg {
+        font-size: 1rem !important;
+    }
+
+    #about .mb-4 {
+        margin-bottom: 1rem !important;
+    }
+
+    #about .images {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        /* padding-bottom: 20px; */
+    }
+
+    #about .flex {
+        display: flex !important;
+    }
+
+    #about .flex-col {
+        flex-direction: column !important;
+    }
+
+    #about .md\:flex-row {
+        flex-direction: column !important;
+    }
+
+    #about .items-center {
+        align-items: center !important;
+    }
+
+    #about .justify-center {
+        justify-content: center !important;
+    }
+}
+
+/* Responsive styles for medium devices like tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #about {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #about .w-full {
+        width: 100% !important;
+    }
+
+    #about .md\:w-1\/2 {
+        width: 45% !important;
+    }
+
+    #about .p-6 {
+        padding: 1.5rem !important;
+    }
+
+    #about .images {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    #about .text-4xl {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* ------------------journey section----------- */
+
+/* Responsive styles for small devices like smartphones */
+@media (max-width: 767px) {
+    #Journey {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #Journey .container {
+        padding: 0 !important;
+    }
+
+    #Journey .text-4xl {
+        font-size: 1.5rem !important;
+    }
+
+    #Journey .timeline-item {
+        flex-direction: column !important;
+    }
+
+    #Journey .w {
+        width: 100% !important;
+    }
+
+    #Journey .text-right {
+        text-align: left !important;
+    }
+
+    #Journey .text-center {
+        text-align: center !important;
+    }
+
+    #Journey .pr-8 {
+        padding-right: 0 !important;
+    }
+
+    #Journey .pl-8 {
+        padding-left: 0 !important;
+    }
+
+    #Journey .text-xl {
+        font-size: 1.25rem !important;
+    }
+
+    #Journey .text-gray-400 {
+        font-size: 1rem !important;
+    }
+
+    #Journey .p-4 {
+        padding: 1rem !important;
+    }
+
+    #Journey .timeline-item i {
+        font-size: 30px !important;
+        padding: 10px !important;
+    }
+
+    #Journey .border {
+        border-width: 1px !important;
+    }
+
+    #Journey .relativev {
+        position: relative !important;
+    }
+
+    /* Hide the vertical line (border-l-4) on small devices */
+    #Journey .border-l-4 {
+        display: none !important;
+    }
+
+    #Journey .absolute {
+        position: relative !important;
+    }
+
+    #Journey .space-y-8 {
+        margin-bottom: 16px !important;
+    }
+
+    /* Keep icons in top left and right */
+    #Journey .timeline-item i {
+        position: absolute !important;
+    }
+
+    /* Left icon stays at the top-left corner */
+    #Journey .timeline-item .Left-NAV.left-0 {
+        left: 10px !important;
+        /* top: 10px !important; */
+        transform: translateY(-50%) translateX(-50%) !important;
+    }
+
+    /* Right icon stays at the top-right corner */
+    #Journey .timeline-item .Left-NAV.right-0 {
+        right: 10px !important;
+        top: 10px !important;
+        transform: translateY(-50%) translateX(50%) !important;
+    }
+
+    #Journey .h{
+        height: auto !important;
+    }
+}
+
+/* Responsive styles for medium devices like tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #Journey {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #Journey .timeline-item {
+        flex-direction: column !important;
+    }
+
+    #Journey .w {
+        width: 100% !important;
+    }
+
+    #Journey .timeline-item i {
+        font-size: 35px !important;
+        padding: 15px !important;
+    }
+
+    #Journey .text-4xl {
+        font-size: 1.75rem !important;
+    }
+
+    #Journey .text-xl {
+        font-size: 1.5rem !important;
+    }
+
+    #Journey .p-4 {
+        padding: 1.5rem !important;
+    }
+
+    #Journey .border-l-4 {
+        border-left-width: 3px !important;
+    }
+
+    #Journey .space-y-8 {
+        margin-bottom: 20px !important;
+    }
+}
+
+/* ------------------skill section----------------- */
+
+@media (max-width: 768px) {
+    .skill-item {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        /* margin-bottom: 20px; */
+    }
+
+    .skill-logo {
+        margin-bottom: 10px;
+        transform: translateX(0);
+    }
+
+    .skill-details {
+        opacity: 1;
+        transform: translateX(0);
+        position: static;
+        left: auto;
+    }
+
+    .progress-bar {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .skill-item:hover .skill-logo {
+        transform: translateX(0);
+    }
+}
+
+/* Base styles for skill items */
+.skill-item {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for fade and move */
+}
+
+/* Animation class to trigger the fade-up effect */
+.fade-up {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+/* Media query for screens 768px and below */
+@media (max-width: 768px) {
+    .skill-item {
+        opacity: 0; /* Ensure items are hidden initially */
+        transform: translateY(20px); /* Start slightly below */
+    }
+
+    .skill-item.fade-up {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
 /* ------------------------------project section------------------- */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
     #projects {
         padding: 50px 20px;
     }
@@ -159,4 +535,3 @@
         display: none;
     }
 }
-
