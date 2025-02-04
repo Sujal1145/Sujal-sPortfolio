@@ -12,11 +12,34 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Responsive.css">
 </head>
 
 <body class="font-roboto bg-gray-100 text-gray-900">
     <!-- Custom Cursor -->
     <div class="custom-cursor" id="custom-cursor"></div>
+
+    <!-- Menu Icon (Hamburger Menu) -->
+    <div id="menuIcon">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Responsive Navigation Menu -->
+    <div id="responsiveNav">
+        <a href="#home"><strong>Start</strong></a>
+        <a href="#about"><strong>About</strong></a>
+        <a href="#Journey"><strong>Timeline</strong></a>
+        <a href="#skills"><strong>Skills</strong></a>
+        <a href="#projects"><strong>Work</strong></a>
+        <a href="#contact"><strong>Connect</strong></a>
+        <div id="responsiveSocials">
+            <a href="https://github.com/Sujal1145"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sujal-jaiswar-b315a5231/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/Sujal_jee_11"><i class="fab fa-twitter"></i></a>
+            <a href="Sujal's_CV.pdf"><i class="fas fa-file-alt"></i></a>
+            <a href="mailto:jaiswarsujal575@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
 
     <div
         class="fixed right-0 top-1/2 transform -translate-y-1/2 flex flex-col items-end space-y-4 pr-4 bg-transparent z-50">
@@ -239,7 +262,7 @@
                     </div>
                 </div>
             </div>
-            <div class="skill-item"> 
+            <div class="skill-item">
                 <i class="fab fa-js skill-logo text-4xl"></i>
                 <div class="skill-details">
                     <h3 class="text-xl font-semibold flex justify-between">
@@ -330,38 +353,38 @@
             <h2 class="text-3xl font-bold text-center mb-8"><span class="headings">True Efforts</span></h2>
             <div class="flex flex-col md:flex-row py-[10px]">
                 <div class="w-full md:w-[300px] bg-white p-4 mb-4 md:mb-0">
-                    <ul class="space-y-4">
-                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px]"
+                    <ul class="">
+                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px] mb-4"
                             onclick="showProject('project1')">
                             <img alt="Thumbnail of Modern Office Building" class="w-10 h-10 object-cover mr-3"
                                 height="40" src="home co (1).png" width="40" />
                             HomeCoach Website
                         </li>
-                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px]"
+                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px] mb-4"
                             onclick="showProject('project2')">
                             <img alt="Thumbnail of Classic Museum" class="w-10 h-10 object-cover mr-3" height="40"
                                 src="image-removebg-preview.png" width="40" />
                             Internship Project
                         </li>
-                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px]"
+                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px] mb-4"
                             onclick="showProject('project3')">
                             <img alt="Thumbnail of Classic Residential House" class="w-30 h-30 object-cover mr-3"
                                 height="40" src="CaLogo.png" width="40" />
                             tghca.in Website
                         </li>
-                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px]"
+                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px] mb-4"
                             onclick="showProject('project4')">
                             <img alt="Thumbnail of Modern Shopping Mall" class="w-10 h-10 object-cover mr-3" height="40"
                                 src="lenkingKart.png" width="40" />
                             LendingKart Software
                         </li>
-                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px]"
+                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px] mb-4"
                             onclick="showProject('project5')">
                             <img alt="Thumbnail of Classic Library Building" class="w-10 h-10 object-cover mr-3"
                                 height="40" src="Reconsilation.png" width="40" />
                             Reconsilation Software
                         </li>
-                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px]"
+                        <li class="cursor-pointer hover:bg-gray-100 flex items-center p-[10px] mb-4"
                             onclick="showProject('project6')">
                             <img alt="Thumbnail of Modern Tech Park" class="w-10 h-10 object-cover mr-3" height="40"
                                 src="TCSlogo.png" width="40" />
@@ -369,11 +392,10 @@
                         </li>
                     </ul>
                 </div>
-                <div class="w-full h-full md:w-3/4 bg-white">
+                <div class="py-4 w-full h-full md:w-3/4 bg-white">
                     <div id="project1" class="project-details">
                         <img alt="Project 1: A modern office building with glass windows and a sleek design"
-                            class="w-full h-48 object-cover mb-4 images" height="400"
-                            src="HomeCoachBG.jpg"
+                            class="w-full h-48 object-cover mb-4 images" height="400" src="HomeCoachBG.jpg"
                             width="600" />
                         <h3 class="text-xl font-semibold mb-2">
                             HomeCoach Website
@@ -429,7 +451,8 @@
                     </div>
                     <div id="project4" class="project-details hidden">
                         <img alt="Project 4: A classic library building with a grand entrance and traditional design"
-                            class="w-full h-48 object-cover mb-4 images" height="400" src="Lendingkart-.png" width="600" />
+                            class="w-full h-48 object-cover mb-4 images" height="400" src="Lendingkart-.png"
+                            width="600" />
                         <h3 class="text-xl font-semibold mb-2">
                             LendingKart Software
                         </h3>

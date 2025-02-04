@@ -188,3 +188,82 @@ document.querySelectorAll('.nav-rightSide').forEach(anchor => {
         }
     });
 });
+
+
+// ------------------------------------menuBar code---------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menuIcon");
+    const responsiveNav = document.getElementById("responsiveNav");
+    const icon = menuIcon.querySelector("i");
+    const navLinks = document.querySelectorAll("#responsiveNav a");
+    const allLinks = document.querySelectorAll("a");
+
+    let lastScrollY = window.scrollY;
+
+    menuIcon.addEventListener("click", function () {
+        responsiveNav.classList.toggle("show");
+
+        // Toggle between menu icon (fa-bars) and close icon (fa-times)
+        if (responsiveNav.classList.contains("show")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+            menuIcon.style.transform = "translateY(0)"; // Keep visible
+            menuIcon.style.opacity = "1";
+        } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+        }
+    });
+
+    // Close menu when clicking a nav link & smoothly scroll to section
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            const targetId = this.getAttribute("href");
+
+            if (targetId.startsWith("#")) {
+                event.preventDefault();
+                const targetSection = document.getElementById(targetId.substring(1));
+
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: "smooth"
+                    });
+                }
+
+                // Close menu after clicking a link
+                responsiveNav.classList.remove("show");
+                icon.classList.remove("fa-times");
+                icon.classList.add("fa-bars");
+            }
+        });
+    });
+
+    // Ensure external links (GitHub, LinkedIn, etc.) open normally
+    allLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            const href = this.getAttribute("href");
+
+            if (href && (href.startsWith("http") || href.startsWith("mailto"))) {
+                return;
+            }
+        });
+    });
+
+    // Hide menu icon on scroll down, show on scroll up (only when in "fa-bars" mode)
+    window.addEventListener("scroll", function () {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const hideThreshold = windowHeight * 0.10; // 10% of window height
+
+        if (scrollY > lastScrollY && scrollY > hideThreshold && icon.classList.contains("fa-bars")) {
+            menuIcon.style.transform = "translateY(-110%)";
+            menuIcon.style.opacity = "1";
+        } else {
+            menuIcon.style.transform = "translateY(0)";
+            menuIcon.style.opacity = "1";
+        }
+
+        lastScrollY = scrollY;
+    });
+});
